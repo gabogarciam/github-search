@@ -2,13 +2,13 @@
   "name": "github-search",
   "version": "1.0.0",
   "description": "![github search](./images/Profile-screen.png)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node ./bin/server.js",
     "heroku-postbuild": "webpack -p",
-    "buildProd": "rm -rf dist && webpack --mode production --config webpack.config.server.js && webpack --mode production",
-    "buildDev": "rm -rf dist && webpack --mode development --config webpack.config.server.js && webpack --mode development",
-    "dev": "rm -rf dist && webpack && webpack-dev-server --mode development"
+    "buildProd": "rm -rf dist && webpack --mode development webpack.config.js && webpack --mode production --config webpack.config.server.js",
+    "buildDev": "rm -rf dist && webpack --mode development webpack.config.js && webpack --mode development --config webpack.config.server.js",
+    "dev": "rm -rf dist && webpack --mode development webpack.config.js && webpack --mode development --config webpack.config.server.js && webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
