@@ -1,12 +1,10 @@
 const path = require('path');
-const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const HtmlWebPackPlugin = require("html-webpack-plugin")
-// const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = {
     entry: {
-        server: './app.js'
+        main: './app.js'
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -14,6 +12,10 @@ module.exports = {
         filename: 'bundle.js'
     },
     target: 'node',
+    node: {
+        __dirname: false,
+        __filename: false
+    },
     externals: [nodeExternals()],
     module: {
         rules: [
