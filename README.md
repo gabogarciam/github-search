@@ -1,13 +1,15 @@
 ## Github Search
 
-![github search](./images/Profile-screen.png)
+<p align="center">
+  <img width="50%" height="50%" src="./public/images/Profile-screen.png">
+</p>
 
 ## Introduction
 
 This project brings information about Github repositories.
 There is a searcher where you can introduce a Github username and it returns a repositories list with access links of the user, besides, some public data like the avatar, name or username.
 
-Your can run the deployed project here: ## https://diana-moreno.github.io/github-repositories
+Your can run the deployed project here: https://gabogarciam/.github.io/github-search
 
 ## Technical Description
 
@@ -34,7 +36,7 @@ https://developer.github.com/v3/users/
 - Clone or download the repository in your computer.
 
 ```bash
-git clone https://github.com/diana-moreno/github-repositories.git`
+git clone https://github.com/gabogarciam/github-search.git`
 ```
 - Install the dependencies in your own repository from the main folder.
 
