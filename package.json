@@ -4,8 +4,8 @@
   "description": "![github search](./images/Profile-screen.png)",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/server.js",
-    "heroku-postbuild": "webpack -p && webpack --mode development webpack.config.js && webpack --mode production --config webpack.config.server.js",
+    "start": "node ./dist/server.js",
+    "heroku-postbuild": "webpack -p --config webpack.config.js --progress && webpack -p --config webpack.config.server.js --progress",
     "buildProd": "rm -rf dist && webpack --mode development webpack.config.js && webpack --mode production --config webpack.config.server.js",
     "buildDev": "rm -rf dist && webpack --mode development webpack.config.js && webpack --mode development --config webpack.config.server.js",
     "dev": "rm -rf dist && webpack --mode development webpack.config.js && webpack --mode development --config webpack.config.server.js && webpack-dev-server --mode development"
