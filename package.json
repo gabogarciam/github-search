@@ -4,6 +4,7 @@
   "description": "![github search](./images/Profile-screen.png)",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "heroku-postbuild": "webpack -p",
     "buildProd": "rm -rf dist && webpack --mode production",
     "buildDev": "rm -rf dist && webpack --mode production",
