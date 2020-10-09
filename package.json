@@ -4,10 +4,10 @@
   "description": "![github search](./images/Profile-screen.png)",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "server .",
     "heroku-postbuild": "webpack -p",
     "buildProd": "rm -rf dist && webpack --mode production",
-    "buildDev": "rm -rf dist && webpack --mode production",
+    "buildDev": "rm -rf dist && webpack --mode development",
     "dev": "webpack-dev-server --mode development"
   },
   "repository": {
