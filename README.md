@@ -57,7 +57,7 @@ Open the project trought the links are provided by the server.
    │   Serving!                                        │
    │                                                   │
    │   - Local:            http://localhost:3000       │
-   │   - On Your Network:  *********************   │
+   │   - On Your Network:  *********************       │
    │                                                   │
    │   Copied local address to clipboard!              │
 ```
