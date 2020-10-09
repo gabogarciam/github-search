@@ -17,13 +17,13 @@ Your can run the deployed project here: https://gabogarciam/.github.io/github-se
 - Jasmine for testing.
 - Git and github.
 - For the API calls, AJAX has been utilized.
-- API consumed: [Github API](https://developer.github.com/v3/)
+- API consumed: [Github API](https://docs.github.com/en/free-pro-team@latest/rest)
 
 You can find more information about this API's features in:
 
-https://developer.github.com/v3/search/#search-users
+https://docs.github.com/en/free-pro-team@latest/rest/reference/users
 
-https://developer.github.com/v3/users/
+https://docs.github.com/en/free-pro-team@latest/rest/reference/search#search-users
 
 ## Usage
 
