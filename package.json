@@ -1,0 +1,20 @@
+{
+  "name": "github-search",
+  "version": "1.0.0",
+  "description": "![github search](./images/Profile-screen.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabogarciam/github-search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabogarciam/github-search/issues"
+  },
+  "homepage": "https://github.com/gabogarciam/github-search#readme"
+}
