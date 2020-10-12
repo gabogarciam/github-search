@@ -12,6 +12,9 @@ module.exports = {
         filename: 'bundle.js'
     },
     target: 'node',
+    devServer: {
+        port: 3000
+    },
     node: {
         __dirname: false,
         __filename: false
