@@ -1,15 +1,37 @@
 ## Github Search
 
+
+## Introduction
+
+This a client side web application brings information about Github repositories. There is a searcher where you can introduce a Github username and it returns a repositories list with access links of the user, besides, some public data like the avatar, name or username.
+
+## SCREENSHOTS
+
+#### First Screen
+
+The user can search a username of GitHub
+
+<p align="center">
+  <img width="50%" height="50%" src="./public/images/Search-screen.png">
+</p>
+
+#### Success Screen
+
+If the searched username does exist: The searched user profile is displayed with all his repositories
+
 <p align="center">
   <img width="50%" height="50%" src="./public/images/Profile-screen.png">
 </p>
 
-## Introduction
+#### Error Screen
 
-This project brings information about Github repositories.
-There is a searcher where you can introduce a Github username and it returns a repositories list with access links of the user, besides, some public data like the avatar, name or username.
+If the searched username does not exist: An error is shown
 
-Your can run the deployed project here: https://gabogarciam/.github.io/github-search
+<p align="center">
+  <img width="50%" height="50%" src="./public/images/Error-screen.png">
+</p>
+
+Your can run the deployed project here: [GitHub Search App](https://github-searching.herokuapp.com/)
 
 ## Technical Description
 
@@ -17,9 +39,9 @@ Your can run the deployed project here: https://gabogarciam/.github.io/github-se
 - Jasmine for testing.
 - Git and github.
 - For the API calls, AJAX has been utilized.
-- API consumed: [Github API](https://docs.github.com/en/free-pro-team@latest/rest)
+- API consumed: [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest)
 
-You can find more information about this API's features in:
+This project uses the GitHub API, you can find more information features in:
 
 https://docs.github.com/en/free-pro-team@latest/rest/reference/users
 
@@ -46,9 +68,10 @@ npm install
 
 **Running:**
 
-- Run de project
+- Compile and run the project in development version.
 ```bash
-npm start
+npm run dev
+
 ```
 
 Open the project trought the links are provided by the server.
@@ -56,7 +79,7 @@ Open the project trought the links are provided by the server.
 ```
    │   Serving!                                        │
    │                                                   │
-   │   - Local:            http://localhost:3000       │
+   │   - Local:            http://localhost:8080       │
    │   - On Your Network:  *********************       │
    │                                                   │
    │   Copied local address to clipboard!              │
