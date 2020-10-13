@@ -1,5 +1,8 @@
+import './public/stylesheets/style.scss';
 
-var newDiv = document.createElement("div");
-var newContent = document.createTextNode("Hola!¿Qué tal?");
-newDiv.appendChild(newContent);
-document.getElementsByClassName('main-container')[0].appendChild(newDiv);
+const UserInterface = require('./public/javascripts/message');
+
+const ui = new UserInterface();
+
+ui.logMessage('Welcome to GitHub Search!');
+ui.createDiv();
