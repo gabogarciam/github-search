@@ -1,11 +1,83 @@
-$body-color: red;
+$body-color: #eeeeec;
+$main-color: #fff;
 
-body {
-  background-color: $body-color;
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html {
+  box-sizing: border-box;
+  display: grid;
+  min-height: 100%;
 }
 
-a {
-  color: #00B7FF;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 20px;
+  padding: 0;
+  background-color: $body-color;
+}
+
+.main-container {
+  box-shadow: 0px 3px 32px 0px;
+  border-radius: 10px;
+  background-color: $main-color;
+}
+
+.navbar {
+  padding: 30px;
+}
+
+#userForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control {
+  height: 42px;
+  width: 100%;
+  font-size: 16px;
+  min-height: 34px;
+  padding: 6px 8px;
+  line-height: 20px;
+  color: #24292e;
+  vertical-align: middle;
+  background-color: $main-color;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+}
+
+.btn {
+  width: 100px;
+  margin-left: 20px;
+  color: #24292e;
+  background-color: #eff3f6;
+  background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-repeat: repeat-x;
+  background-position: -1px -1px;
+  background-size: 110% 110%;
+  border: 1px solid rgba(27,31,35,0.2);
+  border-radius: 0.25em;
+  outline:none;
+}
+
+.btn:hover {
+  background-color: #8b8e91;
+  background-image: linear-gradient(-180deg,#e3e7e9,#dae4e9 90%);
 }
