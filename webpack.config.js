@@ -1,5 +1,5 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 module.exports = {
@@ -11,15 +11,11 @@ module.exports = {
         publicPath: '/',
         filename: 'bundle.js'
     },
-    target: 'node',
+    target: 'web',
+    devtool: 'source-map',
     devServer: {
         port: 3000
     },
-    node: {
-        __dirname: false,
-        __filename: false
-    },
-    externals: [nodeExternals()],
     module: {
         rules: [
             {
@@ -32,13 +28,26 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: [{ loader: "html-loader" }]
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: ['file-loader']
             }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
             template: "./public/index.html",
-            filename: "./index.html"
+            filename: "./index.html",
+            excludeChunks: [ 'server' ]
         })
     ]
 }
