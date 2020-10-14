@@ -35,11 +35,12 @@ Your can run the deployed project here: [GitHub Search App](https://github-searc
 
 ## Technical Description
 
-- This project has been developed with Javascript Vanilla, CSS-SASS, and following BEM rules.
+- This project has been developed with Javascript, CSS-SASS, and following BEM rules.
+- Webpack as a bundler and Babel how transpiler.
+- FETCH has been utilized for the API calls.
+- API consumed: [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest)
 - Jasmine for testing.
 - Git and github.
-- For the API calls, AJAX has been utilized.
-- API consumed: [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest)
 
 This project uses the GitHub API, you can find more information features in:
 
