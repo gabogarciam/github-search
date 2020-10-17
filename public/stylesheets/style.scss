@@ -3,8 +3,6 @@ $main-color: #fff;
 
 html {
   box-sizing: border-box;
-  display: grid;
-  min-height: 100%;
 }
 
 *, *:before, *:after {
@@ -12,8 +10,7 @@ html {
 }
 
 body {
-  margin: 20px;
-  padding: 0;
+  margin: 0;
   background-color: $body-color;
 }
 
@@ -22,6 +19,7 @@ body {
   border-radius: 10px;
   background-color: $main-color;
   max-width: 1012px;
+  margin-top: 2rem;;
   margin-right: auto;
   margin-left: auto;
 }
@@ -89,7 +87,7 @@ body {
 }
 
 .container {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -102,9 +100,84 @@ body {
   vertical-align: middle;
 }
 
+.container-avatar {
+  padding: 10px;
+}
+
+.avatar {
+  width: 150px;
+}
+
+.profile-info {
+  padding: 10px;
+  margin-top: -15px;
+}
+
+.nickname {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.profile-info > h2 {
+  font-weight: 800;
+}
+
+.title-repo {
+  border-bottom: 2px solid #777777;
+  padding-bottom: 1rem;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.repositori {
+  list-style: none;
+  border-bottom: 1px #e1e4e8 solid!important;
+  display: block!important;
+  width: 100%!important;
+  /* position: relative; */
+  /* display: table-row; */
+  /* border-bottom: 1px solid #464444; */
+}
+
+.repocell {
+  position: relative;
+  display: table-cell;
+  padding: 8px 10px;
+  vertical-align: top;
+}
+
+.count-counters {
+  float: right!important;
+  margin-top: -40px!important;
+  display: flex;
+}
+
+.count-counters > div:last-child {
+  padding-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0366d6;
+}
+
+a:hover {
+  border-bottom: 2px solid #0366d6;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   #userForm {
     display: flex!important;
     flex-direction: column!important;
@@ -122,5 +195,10 @@ body {
       margin-top: 0.5rem;
       margin-left: 0;
     }
+  }
+
+  .card-head {
+    display: block;
+    text-align: center;
   }
 }
