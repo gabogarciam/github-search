@@ -1,15 +1,8 @@
 'use strict'
 
-class someSharingMethods {
-    // const logMessage = msg => console.log(msg);
-    logMessage(msg) { console.log(msg) };
+class sharingMethods {
 
-    createDiv() {
-        var newDiv = document.createElement("div");
-        var newContent = document.createTextNode("Hola!¿Qué tal?");
-        newDiv.appendChild(newContent);
-        document.getElementsByClassName('main-container')[0].appendChild(newDiv);
-    }
+    logMessage(msg) { console.log(msg) };
 }
 
-module.exports = someSharingMethods;
+module.exports = sharingMethods;
