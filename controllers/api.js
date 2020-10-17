@@ -2,26 +2,32 @@ require("regenerator-runtime/runtime");
 
 class apiGitHub {
 
-    async fetchUser(user) {
+    async fetchUserData(user) {
 
         const userData = await fetch(`https://api.github.com/users/${user}`)
             .then((res) => {
-                if (res.status === 400) return res.statusText
-                
-                return res.json();
+                return res.status !== 200 ? res.status : res.json();
             })
-            .catch((err) => { return err; });
+            .catch((err) => {
+                console.log('Looks like a error when we try to retrive the user data, error code: ', err);
+            });
+        
+        return {
+            userData
+        }
+    }
+
+    async fetchUserRepos(user) {
 
         const userRepos = await fetch(`https://api.github.com/users/${user}/repos`)
             .then((res) => {
-                if (res.status === 400) return res.statusText
-
-                return res.json();
+                return res.status !== 200 ? res.status : res.json();
             })
-            .catch((err) => { console.log('Looks like a error when we try to retrive the user repositories, error code: ', err); })
+            .catch((err) => {
+                console.log('Looks like a error when we try to retrive the user repositories, error code: ', err);
+            })
         
         return {
-            userData,
             userRepos
         }
     }

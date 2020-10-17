@@ -16,15 +16,23 @@ userForm.addEventListener('submit', (event) => {
     const textSearch = userForm.querySelector('#textSearch').value;
 
     if (textSearch != '') {
-        retriveUserData.fetchUser(textSearch)
+        retriveUserData.fetchUserData(textSearch)
             .then((data) => {
-                if (data.userData.message === "Not Found") {
+                if (data.userData === 404) {
                     ui.clearError();
                     ui.showError(`We couldn’t find any user matching with '${textSearch}'`)
                     return;
+                } else if (data.userData === "rate limit exceeded") {
+                    ui.clearError();
+                    ui.showError('Rate Limit of consults exceeded');
+                    return;
                 };
                 ui.clearError();
-                console.log('Yeee it works!!!');
+                ui.showProfile(data.userData);
+                retriveUserData.fetchUserRepos(textSearch)
+                    .then((data) => {
+                        ui.showRepositories(data.userRepos);
+                    });
             });
     } else {
         ui.clearError();
