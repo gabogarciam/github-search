@@ -30,7 +30,7 @@ class UserInterface {
             <div class="profile-info">
                 <p class="nickname">@${user.login}</p>
                 <h2 class="fullname">${user.name}</h2>
-                <p class="bio">${user.bio}</p>
+                <p class="bio">${user.bio === null ? '' : user.bio}</p>
             </div>
         `;
     }
@@ -42,11 +42,11 @@ class UserInterface {
                 <li class="repositori">
                     <div class="repocell">
                         <h3>
-                            <a href="${element.html_url}" target="_blank">${element.name}</a>
+                            <a href="${element.html_url}">${element.name}</a>
                         </h3>
                     </div>
                     <div class="count-counters">
-                        <div><i class="fas fa-star"></i> ${element.stargazers_count}</div>
+                        <div><i class="far fa-star"></i> ${element.stargazers_count}</div>
                         <div><i class="fas fa-code-branch"></i> ${element.forks_count}</div>
                     </div>
                 </li>
