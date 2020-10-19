@@ -22,6 +22,22 @@ class UserInterface {
         if (alert) { alert.remove(); }
     }
 
+    clearUserData() {
+        const userAvatar = document.querySelector('.container-avatar');
+        const userProfile = document.querySelector('.profile-info');
+        const userRepoTitle = document.querySelector('.title-repo');
+        const userRepos = document.querySelectorAll('#repositories ul')
+
+        if (userAvatar) {
+            userAvatar.remove();
+            userProfile.remove();
+            userRepoTitle.remove();
+            userRepos.forEach((elem) => {
+                elem.remove();
+            })
+        }
+    }
+
     showProfile(user) {
         this.profile.innerHTML = `
             <div class="container-avatar">
@@ -29,7 +45,7 @@ class UserInterface {
             </div>
             <div class="profile-info">
                 <p class="nickname">@${user.login}</p>
-                <h2 class="fullname">${user.name}</h2>
+                <h2 class="fullname">${user.name === null ? '' : user.name}</h2>
                 <p class="bio">${user.bio === null ? '' : user.bio}</p>
             </div>
         `;
