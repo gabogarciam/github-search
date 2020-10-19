@@ -3,7 +3,7 @@ class sharingMethods {
     this.msg = message;
   }
 
-  logMessage() { console.log(this.msg); };
+  logMessage() { console.log(this.msg); }
 }
 
 module.exports = sharingMethods;
