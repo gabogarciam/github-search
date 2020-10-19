@@ -1,36 +1,29 @@
 require("regenerator-runtime/runtime");
 
 class apiGitHub {
+  constructor(user) {
+    this.user = user;
+  }
 
-    async fetchUserData(user) {
+  async fetchUserData() {
+    const userData = await fetch(`https://api.github.com/users/${this.user}`)
+      .then((res) => (res.status !== 200 ? res.status : res.json()))
+      .catch((err) => {
+        console.log('Looks like a error when we try to retrive the user data, error code: ', err);
+      });
 
-        const userData = await fetch(`https://api.github.com/users/${user}`)
-            .then((res) => {
-                return res.status !== 200 ? res.status : res.json();
-            })
-            .catch((err) => {
-                console.log('Looks like a error when we try to retrive the user data, error code: ', err);
-            });
-        
-        return {
-            userData
-        }
-    }
+    return { userData };
+  }
 
-    async fetchUserRepos(user) {
+  async fetchUserRepos() {
+    const userRepos = await fetch(`https://api.github.com/users/${this.user}/repos`)
+      .then((res) => (res.status !== 200 ? res.status : res.json()))
+      .catch((err) => {
+        console.log('Looks like a error when we try to retrive the user repositories, error code: ', err);
+      });
 
-        const userRepos = await fetch(`https://api.github.com/users/${user}/repos`)
-            .then((res) => {
-                return res.status !== 200 ? res.status : res.json();
-            })
-            .catch((err) => {
-                console.log('Looks like a error when we try to retrive the user repositories, error code: ', err);
-            })
-        
-        return {
-            userRepos
-        }
-    }
+    return { userRepos };
+  }
 }
 
 module.exports = apiGitHub;
