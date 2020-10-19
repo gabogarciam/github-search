@@ -20,11 +20,12 @@ userForm.addEventListener('submit', (event) => {
             .then((data) => {
                 if (data.userData === 404) {
                     ui.clearError();
+                    ui.clearUserData();
                     ui.showError(`We couldn’t find any user matching with '${textSearch}'`)
                     return;
-                } else if (data.userData === "rate limit exceeded") {
+                } else if (data.userData === 403) {
                     ui.clearError();
-                    ui.showError('Rate Limit of consults exceeded');
+                    ui.showError('Rate Limit of consults exceded');
                     return;
                 };
                 ui.clearError();
@@ -36,6 +37,7 @@ userForm.addEventListener('submit', (event) => {
             });
     } else {
         ui.clearError();
+        ui.clearUserData();
         ui.showError('Field Search is empty')
     }
     event.preventDefault();
