@@ -1,8 +1,9 @@
-'use strict'
-
 class sharingMethods {
+  constructor(message) {
+    this.msg = message;
+  }
 
-    logMessage(msg) { console.log(msg) };
+  logMessage() { console.log(this.msg); };
 }
 
 module.exports = sharingMethods;
