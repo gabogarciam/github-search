@@ -43,6 +43,6 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^5.2.1"
   }
 }
